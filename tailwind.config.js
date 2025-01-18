@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        cloud : "url('./assets/union.png')",
+        cloud : "url('./assets/Union.png')",
         thunder : "url('./assets/thunder.png')",
         snow : "url('./assets/snow.png')",
         rain : "url('./assets/rain.png')",
