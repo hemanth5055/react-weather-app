@@ -13,6 +13,7 @@ function App() {
       .then((data) => {
         console.log(data);
         setData(data);
+        setCity("")
         setLoading(false);
         setRender(true);
       })
@@ -36,6 +37,7 @@ function App() {
         setLoading(false);
         if (data.cod == 200) {
           setData(data)
+          setCity("")
         }
         else{
           alert("city Not Found !")
@@ -53,10 +55,10 @@ function App() {
           <div className='h-full w-[70px] flex justify-start items-center  max-sm:w-[20%] max-sm:hidden'>
             {loading ? <ThreeDot color="#fff" size="small" text="" /> : ''}
           </div>
-          <input type="text" value={city} className='w-[300px] h-[40px] px-4 text-[1.3vw] rounded-full text-slate-900 font-mont outline-none max-sm:text-[4vw] max-sm:w-[100%]' onChange={(e) => {
+          <input type="text" value={city} placeholder='City Name' className='placeholder:font-semibold placeholder:text-[1.1vw] w-[300px] h-[40px] px-4 text-[1.3vw] rounded-full text-slate-900 font-mont outline-none max-sm:text-[4vw] max-sm:w-[100%] max-sm:placeholder:text-[3.5vw]' onChange={(e) => {
             setCity(e.target.value);
           } } />
-          <div className='absolute pr-[10px] h-[40px] w-[40px] right-0 top-0 flex justify-center pl-3 items-center rounded-full font-bold max-sm:right-0 bg-black' onClick={() => getData()}>
+          <div className='absolute pr-[10px] h-[40px] w-[40px] right-0 top-0 flex justify-center pl-3 items-center rounded-full font-bold max-sm:right-0 bg-black cursor-pointer' onClick={() => getData()}>
             <FiSearch className='text-white'/>
           </div>
         </div>

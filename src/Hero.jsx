@@ -22,7 +22,7 @@ function Hero({data}) {
         <R2comp name="visibility" dataR2={data.visibility/1000}></R2comp>
         <R2comp name="winddegree" dataR2={data.wind.deg}></R2comp>
         </div>
-        <div className='footer w-full flex justify-between items-center mt-[110px] px-6 max-sm:mt-[80px]'>
+        <div className='footer w-full flex justify-between items-center mt-[110px] px-6 max-sm:mt-[90px]'>
             <div className='px-4 py-1 bg-slate-200 text-black font-mont font-semibold rounded-md items-center max-sm:text-[3vw] '><FaCircle className='inline text-red-500'/> Real Time</div>
             
             <h2 className='text-gray-500 font-mont text-[1.2vw] max-sm:text-[3vw] '>{data.name} , {data.sys.country}</h2>
